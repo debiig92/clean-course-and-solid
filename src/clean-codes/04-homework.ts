@@ -31,7 +31,7 @@
         if(!isThirdStepWorking) return 'Third step broken.'
         if(!isFourthStepWorking) return 'Fourth step broken.'
 
-        if(isFirstStepWorking && isSecondStepWorking && isThirdStepWorking && isFourthStepWorking) return 'Working properly!';
+        return 'Working properly!';
     }
 
 
