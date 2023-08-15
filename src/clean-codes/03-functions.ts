@@ -11,12 +11,18 @@
     }
 
     // funcion para obtener el bio del actor por el id
-    function getCastBioById( castId: string ) {
+    function getActorBioById( castId: string ) {
         console.log({ castId });
     }
     
+    interface Movie {
+        title: string;
+        description: string;
+        rating: number; 
+        cast: string[];
+    }
     // Crear una película
-    function createAMovie(title: string, description: string, rating: number, cast: string[] ) {
+    function createAMovie( { title, description, rating, cast }: Movie ) {
         console.log({ title, description, rating, cast });
     }
 
@@ -28,9 +34,21 @@
         // ..
         if ( fullName === 'fernando' ) return false;
 
-        console.log('Crear actor');
+        console.log('Crear actor', birthdate);
         return true;        
 
+    }
+
+
+    // Continuacion
+
+    const getPayAmount = ({ isDead = false, isSeparated = true, isRetired = false }) => {
+
+        if ( isDead ) return 1500;
+        
+        if ( isSeparated ) return 2500;
+        
+        return isRetired ? 3000 : 4000;
     }
 
     
